@@ -7,7 +7,7 @@ no warnings 'experimental::smartmatch';
 open(my $in, '<', 'data/persondata.dump');
 open(my $out, '>', 'data/persondata.csv');
 
-print $out "FIRST NAME|SURNAME|ALTNAMES|SHORT|DOB|POB|DOD|POD";
+print $out "name|name_alt|desc_short|date_birth|place_birth|date_death|place_death";
 
 while (my $lin = <$in>){
 	$lin =~ s/\[\[.*\|(.*)\]\],/$1,/;
