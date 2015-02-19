@@ -17,6 +17,7 @@ remove_artefacts <- function(v) {
   v <- gsub("\\&gt\\;","",v)
   v <- gsub("\\&lt\\;","",v)
   v <- gsub("\\&amp\\;","",v)
+  v <- gsub("\\&quot\\;","",v)
 }
 
 df$date_birth <- remove_artefacts(df$date_birth)
